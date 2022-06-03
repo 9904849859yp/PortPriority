@@ -1,6 +1,6 @@
 .banner-sec {
     padding: 13.625rem 0 12.125rem;
-    background-image: url("/images/Inventory_bg.jpg");
+    background-image: url("../images/Inventory_bg.jpg");
     color: $primary-font-color;
 
     @include mobile {
@@ -14,7 +14,7 @@
 
     &::after {
         content: "";
-        background-image: url("/images/inventory_bottom.svg");
+        background-image: url("../images/inventory_bottom.svg");
         height: 100%;
         width: 50%;
         right: 0;

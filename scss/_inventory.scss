@@ -1,5 +1,5 @@
 .inventory-sec {
-    background-image: url("/images/Inventory_bg.jpg");
+    background-image: url("../images/Inventory_bg.jpg");
     padding: 12.9375rem 0 4.8125rem;
     color: $primary-font-color;
     position: relative;
@@ -20,7 +20,7 @@
 
     &::after {
         content: "";
-        background-image: url("/images/inventory_bottom.svg");
+        background-image: url("../images/inventory_bottom.svg");
         height: 100%;
         width: 50%;
         right: 0;
