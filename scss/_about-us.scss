@@ -1,0 +1,17 @@
+.about-us-sec {
+    padding: 5rem 0 6.5625rem;
+
+    &__info {
+        max-width: 30.425rem;
+
+        @include mobile {
+            max-width: 100%;
+            margin-bottom: 3rem;
+        }
+
+        b {
+            padding: 1.875rem 0;
+            display: block;
+        }
+    }
+}

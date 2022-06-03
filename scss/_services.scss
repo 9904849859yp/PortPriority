@@ -1,0 +1,53 @@
+.services-sec {
+    padding: 11.9375rem 0 5rem;
+
+
+    &__image {
+        max-width: 28.4375rem;
+
+        @include mobile {
+            max-width: 100%;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__accordion {
+        padding-top: 1.875rem;
+
+    }
+
+    h3 {
+
+        +p {
+            max-width: 27.9375rem;
+            margin-bottom: 2.875rem;
+
+            @include mobile {
+                max-width: 100%;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+    }
+
+    .btn-header-link {
+        color: $secondary-color;
+
+        &:not(.collapsed) {
+            color: $primary-color;
+
+            .fa-solid {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .fa-solid {
+        margin-right: 2.375rem;
+        transition: 0.3s all linear;
+    }
+
+    .services-body {
+        padding: 1rem 1rem 1rem 3.5rem;
+    }
+}

@@ -1,0 +1,65 @@
+.support-sec {
+    position: relative;
+    background-color: $primary-color;
+    color: $primary-font-color;
+
+    &::before {
+        content: "";
+        background-image: url("/images/bottom_shape.svg");
+        height: 100%;
+        width: 33.33%;
+        left: 0;
+        @include background-shape;
+        background-position: left bottom;
+        z-index: 1;
+    }
+
+
+
+    &__info {
+        padding-top: 8.8125rem;
+        padding-bottom: 19.8125rem;
+        position: relative;
+        z-index: 1;
+
+        @include mobile {
+            padding-bottom: 0;
+        }
+
+        h3 {
+            white-space: nowrap;
+
+            @include tablet {
+                white-space: normal;
+            }
+        }
+    }
+
+    &__accordion {
+        padding-top: 1.875rem;
+
+        .btn-header-link {
+            &:hover {
+                color: $primary-font-color;
+            }
+
+            &:not(.collapsed) {
+                .fa-solid {
+                    &::before {
+                        content: "\f068";
+                    }
+                }
+            }
+        }
+
+        .fa-solid {
+            margin-right: 1.875rem;
+            transition: 0.3s all linear;
+        }
+
+        .support-body {
+            padding: 0 3.125rem;
+        }
+    }
+
+}

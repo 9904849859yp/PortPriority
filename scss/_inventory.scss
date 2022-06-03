@@ -1,0 +1,154 @@
+.inventory-sec {
+    background-image: url("/images/Inventory_bg.jpg");
+    padding: 12.9375rem 0 4.8125rem;
+    color: $primary-font-color;
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+        padding-bottom: 0;
+    }
+
+
+    &__main {
+
+        .col-lg-6 {
+            position: static;
+        }
+
+    }
+
+    &::after {
+        content: "";
+        background-image: url("/images/inventory_bottom.svg");
+        height: 100%;
+        width: 50%;
+        right: 0;
+        background-position: right bottom;
+        @include background-shape;
+
+        @include mobile {
+            width: 90%;
+        }
+    }
+
+
+    @include tablet-portrait {
+        padding-bottom: 1.8125rem;
+    }
+
+    &__info {
+        ul {
+            @include tablet-portrait {
+                max-width: 50%;
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        width: calc(50% - 3%);
+        height: auto;
+        right: 3%;
+        top: auto;
+        transform: translateY(-50%);
+        bottom: -5%;
+
+        @include tablet-landscape {
+
+            top: auto;
+            width: 100%;
+            bottom: -45%;
+        }
+
+        @include mobile {
+
+            position: static;
+            width: 100%;
+            height: auto;
+            right: 0;
+            top: auto;
+            -webkit-transform: none;
+            transform: none;
+            bottom: 0;
+            margin-top: 3rem;
+            margin-bottom: -13rem;
+            margin-right: -3rem;
+
+        }
+    }
+
+    p {
+        padding: 0.625rem 0 3.125rem;
+        margin: 0;
+    }
+
+    li {
+        @include flexbox(flex-start);
+        margin-bottom: 1.75rem;
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        p {
+            padding: 0;
+            margin-left: 1rem;
+        }
+    }
+
+    .fa-solid {
+        width: 3.375rem;
+        height: 3.375rem;
+        border-radius: $radius50;
+        @include flexbox(center);
+        background-color: $primary-color ;
+        flex: 0 0 3.375rem;
+    }
+
+    .container-fluid {
+        padding: 0;
+        position: relative;
+        z-index: -1;
+
+        @include mobile {
+            z-index: 9;
+        }
+
+    }
+
+    &__bottom-info {
+        padding: 1.5625rem 2.5rem;
+        background-color: $primary-color ;
+        margin-top: 8.375rem;
+
+        @include mobile {
+            margin-top: 13.375rem;
+        }
+
+
+        span {
+            font-size: $font25;
+            color: $primary-font-color;
+            font-family: $secondary-font-family;
+            line-height: 1.32;
+
+            @include laptop {
+                font-size: $font24;
+            }
+
+            @include tablet-landscape {
+                font-size: $font22;
+            }
+
+            @include tablet-portrait {
+                font-size: $font20;
+            }
+
+            @include mobile {
+                font-size: $font14;
+            }
+        }
+    }
+}

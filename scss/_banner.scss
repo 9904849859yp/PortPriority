@@ -1,0 +1,80 @@
+.banner-sec {
+    padding: 13.625rem 0 12.125rem;
+    background-image: url("/images/Inventory_bg.jpg");
+    color: $primary-font-color;
+
+    @include mobile {
+        width: 100%;
+        padding: 10.625rem 0 35.125rem;
+    }
+
+
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        background-image: url("/images/inventory_bottom.svg");
+        height: 100%;
+        width: 50%;
+        right: 0;
+        background-position: right bottom;
+        @include background-shape;
+
+        @include mobile {
+            width: 90%;
+
+        }
+    }
+
+
+    &__main {
+
+        .col-lg-6 {
+            position: static;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        width: calc(50% - 3%);
+        height: auto;
+        right: 3%;
+        top: auto;
+        transform: translateY(-50%);
+        bottom: -3%;
+
+        @include mobile {
+            width: 100%;
+            right: 0;
+
+        }
+
+
+        @include tablet-landscape {
+            top: auto;
+            bottom: 0;
+        }
+
+
+        @include tablet-portrait {
+            top: auto;
+            bottom: 0;
+        }
+
+    }
+
+
+
+    &__info {
+        p {
+            max-width: 28.125rem;
+        }
+
+    }
+
+    &__btn {
+        margin-top: 6.75rem;
+    }
+
+}

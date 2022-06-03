@@ -1,0 +1,23 @@
+.coverage-sec {
+    padding: 8.25rem 0 8rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-image: url("/images/orange_bottom_bg.svg");
+        height: 100%;
+        width: 33.33%;
+        right: 0;
+        background-position: right bottom;
+        @include background-shape;
+    }
+
+    &__image {
+        padding-top: 2.75rem;
+
+        @include tablet-landscape {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+}

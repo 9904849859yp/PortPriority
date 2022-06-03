@@ -1,0 +1,230 @@
+body {
+    .header-sec {
+        margin: 0;
+        padding: 0;
+        @include flexbox(space-between);
+        padding: 1.979166vw 3.6458333vw;
+        position: fixed;
+        width: 100%;
+        z-index: 9;
+        transition: 0.3s all linear;
+
+        @include mobile {
+            padding: 10px 15px
+        }
+
+        ul {
+            @include flexbox(center);
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            a {
+                font-size: $font16;
+                color: $primary-font-color;
+                line-height: 1.1875;
+                text-transform: capitalize;
+
+                &:hover {
+                    color: $primary-font-color;
+                }
+            }
+        }
+
+
+    }
+
+    .sticky {
+        background-color: $secondary-color;
+        padding: 1vw 3.6458333vw;
+
+        @include mobile {
+            padding: 10px 15px;
+        }
+    }
+
+
+    .simple-menu {
+
+
+        width: calc(100% - 273px);
+        display: flex;
+        align-items: center;
+
+
+        ul {
+            &:first-child {
+                width: calc(100% - 365px);
+
+                @include tablet {
+                    width: 100%;
+                }
+            }
+
+            li {
+                display: inline-block;
+
+
+                &:not(:first-child) {
+                    margin-left: 25px;
+                }
+
+                a {
+
+
+                    &:hover {
+
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        #nav {
+            display: none;
+
+            &:checked+.nav-open {
+                transform: rotate(45deg);
+            }
+
+            &:checked+.nav-open i {
+                background: $primary-color;
+                transition: transform 0.2s ease;
+
+                &:nth-child(1) {
+                    transform: translateY(6px) rotate(180deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-6px) rotate(90deg);
+                }
+
+            }
+
+            &:checked~.nav-container {
+                z-index: 9;
+                opacity: 1;
+                height: 100%;
+
+                ul {
+                    li {
+                        a {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .nav-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+
+    }
+
+
+
+
+
+    @include tablet {
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+            background: $secondary-color;
+            opacity: 0;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+
+
+            ul {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    display: block;
+                    float: none;
+                    text-align: right;
+                    margin-bottom: 10px;
+
+                    &:nth-child(1) a {
+                        transition-delay: 0.2s;
+                    }
+
+                    &:nth-child(2) a {
+                        transition-delay: 0.3s;
+                    }
+
+                    &:nth-child(3) a {
+                        transition-delay: 0.4s;
+                    }
+
+                    &:nth-child(4) a {
+                        transition-delay: 0.5s;
+                    }
+
+                    &:not(:first-child) {
+                        margin-left: 0;
+                    }
+
+                    a {
+                        padding: 10px 25px;
+                        opacity: 0;
+                        color: $primary-font-color;
+                        font-size: $font18;
+                        font-weight: $regular;
+
+                        transition: all 0.2s ease;
+                    }
+                }
+            }
+        }
+
+        .nav-open {
+            position: fixed;
+            right: 10px;
+            top: 10px;
+            display: block;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+            z-index: 91;
+            border-radius: 50%;
+
+            i {
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: $primary-color;
+                border-radius: 2px;
+                margin-left: 14px;
+
+                &:nth-child(1) {
+                    margin-top: 16px;
+                }
+
+                &:nth-child(2) {
+                    margin-top: 4px;
+                    opacity: 1;
+                }
+
+                &:nth-child(3) {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+
+}

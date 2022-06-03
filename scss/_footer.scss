@@ -1,0 +1,60 @@
+.footer-main {
+    background-color: $secondary-color;
+    color: $primary-font-color;
+    padding: 4.4375rem 0 3.1875rem;
+
+    &__logo {
+        padding-bottom: 4.25rem;
+    }
+
+    a {
+        color: $primary-font-color;
+        font-weight: $semi-bold;
+        font-size: $font16;
+        margin-bottom: 1.25rem;
+        display: block;
+    }
+
+    p {
+        color: $primary-font-color;
+        font-weight: $regular;
+        font-size: $font16;
+        margin-bottom: 0;
+        line-height: 1.875;
+    }
+
+    .row {
+        @include mobile {
+            text-align: center;
+        }
+    }
+}
+
+.footer-bottom {
+    padding: 2.8125rem 0;
+    background-color: $secondary-color;
+    padding-bottom: 3.1875rem;
+
+
+    small {
+        color: $primary-font-color;
+        opacity: 0.45;
+    }
+
+    .footer-link {
+        a {
+            color: $primary-font-color;
+            font-size: $font24;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .row {
+        @include mobile {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,417 @@
+// Variables
+
+// font-family
+$primary-font-family: 'Work Sans';
+$secondary-font-family: 'OPTIImprovNewWideNine';
+
+// color 
+$primary-color : #F54000;
+$secondary-color : #191818;
+$primary-font-color : #ffffff;
+
+
+// font-size
+$font14: 14px;
+$font16: 16px;
+$font18: 18px;
+$font20: 20px;
+$font22: 22px;
+$font24: 24px;
+$font25: 25px;
+$font28: 28px;
+$font32: 32px;
+$font36: 36px;
+$font38: 38px;
+$font40: 40px;
+$font42: 42px;
+$font50: 50px;
+$font60: 60px;
+$font70: 70px;
+
+// font-weight 
+
+$black : 900;
+$bold : 700;
+$semi-bold : 600;
+$medium : 500;
+$regular : 400;
+$light : 300;
+
+// border radius
+
+$radius50 : 50%;
+
+
+// flex mixin
+
+
+@mixin flexbox($jc) {
+    display: flex;
+    align-items: center;
+    justify-content: $jc;
+}
+
+@mixin background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin background-shape {
+    z-index: -1;
+    background-size: contain;
+    position: absolute;
+    bottom: -1px;
+    background-repeat: no-repeat;
+
+}
+
+// postion
+
+$relative : relative;
+$absolute : absolute;
+$fixed : fixed;
+$sticky : sticky;
+$static : static;
+
+// comman code
+
+
+// fonts
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/WorkSans/WorkSans-Light.eot');
+    src: url('/fonts/WorkSans/WorkSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/WorkSans/WorkSans-Light.woff2') format('woff2'),
+        url('/fonts/WorkSans/WorkSans-Light.woff') format('woff'),
+        url('/fonts/WorkSans/WorkSans-Light.ttf') format('truetype'),
+        url('/fonts/WorkSans/WorkSans-Light.svg#WorkSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/WorkSans/WorkSans-ExtraLight.eot');
+    src: url('/fonts/WorkSans/WorkSans-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/WorkSans/WorkSans-ExtraLight.woff2') format('woff2'),
+        url('/fonts/WorkSans/WorkSans-ExtraLight.woff') format('woff'),
+        url('/fonts/WorkSans/WorkSans-ExtraLight.ttf') format('truetype'),
+        url('/fonts/WorkSans/WorkSans-ExtraLight.svg#WorkSans-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/WorkSans/WorkSans-ExtraBold.eot');
+    src: url('/fonts/WorkSans/WorkSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/WorkSans/WorkSans-ExtraBold.woff2') format('woff2'),
+        url('/fonts/WorkSans/WorkSans-ExtraBold.woff') format('woff'),
+        url('/fonts/WorkSans/WorkSans-ExtraBold.ttf') format('truetype'),
+        url('/fonts/WorkSans/WorkSans-ExtraBold.svg#WorkSans-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/WorkSans/WorkSans-Medium.eot');
+    src: url('/fonts/WorkSans/WorkSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/WorkSans/WorkSans-Medium.woff2') format('woff2'),
+        url('/fonts/WorkSans/WorkSans-Medium.woff') format('woff'),
+        url('/fonts/WorkSans/WorkSans-Medium.ttf') format('truetype'),
+        url('/fonts/WorkSans/WorkSans-Medium.svg#WorkSans-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/WorkSans/WorkSans-Regular.eot');
+    src: url('/fonts/WorkSans/WorkSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/WorkSans/WorkSans-Regular.woff2') format('woff2'),
+        url('/fonts/WorkSans/WorkSans-Regular.woff') format('woff'),
+        url('/fonts/WorkSans/WorkSans-Regular.ttf') format('truetype'),
+        url('/fonts/WorkSans/WorkSans-Regular.svg#WorkSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OPTIImprovNewWideNine';
+    src: url('/fonts/OPTIImprovNewWideNine/OPTIImprovNewWideNine.eot');
+    src: url('/fonts/OPTIImprovNewWideNine/OPTIImprovNewWideNine.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/OPTIImprovNewWideNine/OPTIImprovNewWideNine.woff2') format('woff2'),
+        url('/fonts/OPTIImprovNewWideNine/OPTIImprovNewWideNine.woff') format('woff'),
+        url('/fonts/OPTIImprovNewWideNine/OPTIImprovNewWideNine.ttf') format('truetype'),
+        url('/fonts/OPTIImprovNewWideNine/OPTIImprovNewWideNine.svg#OPTIImprovNewWideNine') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/WorkSans/WorkSans-SemiBold.eot');
+    src: url('/fonts/WorkSans/WorkSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/WorkSans/WorkSans-SemiBold.woff2') format('woff2'),
+        url('/fonts/WorkSans/WorkSans-SemiBold.woff') format('woff'),
+        url('/fonts/WorkSans/WorkSans-SemiBold.ttf') format('truetype'),
+        url('/fonts/WorkSans/WorkSans-SemiBold.svg#WorkSans-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/WorkSans/WorkSans-Bold.eot');
+    src: url('/fonts/WorkSans/WorkSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/WorkSans/WorkSans-Bold.woff2') format('woff2'),
+        url('/fonts/WorkSans/WorkSans-Bold.woff') format('woff'),
+        url('/fonts/WorkSans/WorkSans-Bold.ttf') format('truetype'),
+        url('/fonts/WorkSans/WorkSans-Bold.svg#WorkSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/WorkSans/WorkSans-Black.eot');
+    src: url('/fonts/WorkSans/WorkSans-Black.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/WorkSans/WorkSans-Black.woff2') format('woff2'),
+        url('/fonts/WorkSans/WorkSans-Black.woff') format('woff'),
+        url('/fonts/WorkSans/WorkSans-Black.ttf') format('truetype'),
+        url('/fonts/WorkSans/WorkSans-Black.svg#WorkSans-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/WorkSans/WorkSans-Thin.eot');
+    src: url('/fonts/WorkSans/WorkSans-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/WorkSans/WorkSans-Thin.woff2') format('woff2'),
+        url('/fonts/WorkSans/WorkSans-Thin.woff') format('woff'),
+        url('/fonts/WorkSans/WorkSans-Thin.ttf') format('truetype'),
+        url('/fonts/WorkSans/WorkSans-Thin.svg#WorkSans-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Media responsive
+
+@mixin desktop {
+    @media (min-width: 1366px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape {
+    @media (min-width: 992px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+// Comman css
+
+body,
+html {
+
+    margin: 0;
+    padding: 0;
+    font-family: $primary-font-family;
+    font-size: 16px;
+    overflow-x: hidden;
+
+    @include laptop {
+        font-size: 14px;
+    }
+
+    @include tablet-landscape {
+        font-size: 12px;
+    }
+
+    @include mobile {
+        font-size: 10px;
+    }
+
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.background-full {
+    @include background-image();
+    position: relative;
+    mix-blend-mode: multiply;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        background-color: $secondary-color;
+        opacity: 0.45;
+        z-index: -1;
+    }
+}
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    @include desktop {
+        max-width: 80.625rem;
+    }
+}
+
+h1 {
+    font-size: $font70;
+    font-family: $secondary-font-family;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+
+    @include laptop {
+        font-size: $font50;
+    }
+
+    @include tablet-landscape {
+        font-size: $font40;
+    }
+
+    @include tablet-portrait {
+        font-size: $font36;
+    }
+
+    @include mobile() {
+        font-size: $font32;
+    }
+
+}
+
+h3 {
+    font-size: $font50;
+    font-family: $secondary-font-family;
+    line-height: 1.34;
+    margin-bottom: 2.5rem;
+
+    @include laptop {
+        font-size: $font42;
+    }
+
+    @include tablet-landscape {
+        font-size: $font36;
+    }
+
+    @include tablet-portrait {
+        font-size: $font32;
+    }
+
+    @include mobile() {
+        font-size: $font28;
+    }
+}
+
+p {
+    font-size: $font18;
+    line-height: 1.666666;
+}
+
+.btn-header-link {
+    padding: 0;
+    font-size: $font22;
+    font-weight: $semi-bold;
+    color: $primary-font-color;
+    margin-bottom: 1.5625rem;
+    line-height: 1.363636;
+    border: none;
+
+    @include mobile {
+        font-size: $font20;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.fa-solid {
+    font-size: $font24;
+    line-height: 1.25;
+
+    @include mobile {
+        font-size: $font16;
+    }
+}
+
+.theme-btn {
+    padding: 0.875rem 1.75rem 0.875rem 4.0625rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/images/transparent-btn.svg);
+    height: 47px;
+    width: 175px;
+    margin: 0;
+    @include flexbox(center);
+    cursor: pointer;
+    transition: 1 all linear;
+
+    a {
+        line-height: 1.1875;
+        font-size: $font16;
+        color: $primary-font-color;
+        white-space: nowrap;
+        text-decoration: none;
+
+
+    }
+
+    &:hover {
+        background-image: url(/images/fill-btn.svg);
+
+    }
+}
