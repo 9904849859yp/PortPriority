@@ -389,6 +389,11 @@ p {
 }
 
 .theme-btn {
+    &:hover {
+        background-image: url(../images/fill-btn.svg);
+
+    }
+
     padding: 0.875rem 1.75rem 0.875rem 4.0625rem;
     background-repeat: no-repeat;
     background-size: contain;
@@ -410,8 +415,5 @@ p {
 
     }
 
-    &:hover {
-        background-image: url(../images/fill-btn.svg);
 
-    }
 }

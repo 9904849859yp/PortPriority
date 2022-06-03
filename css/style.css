@@ -277,16 +277,16 @@ p {
   transition: 1 all linear;
 }
 
+.theme-btn:hover {
+  background-image: url(../images/fill-btn.svg);
+}
+
 .theme-btn a {
   line-height: 1.1875;
   font-size: 16px;
   color: #ffffff;
   white-space: nowrap;
   text-decoration: none;
-}
-
-.theme-btn:hover {
-  background-image: url(../images/fill-btn.svg);
 }
 
 body .header-sec {
